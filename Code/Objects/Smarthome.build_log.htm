@@ -1,0 +1,157 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: avc ugu, ftf, LIC=GMZ8T-RQC5Z-9GX70-BWW9H-Z2PW7-8KLRU
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.28.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+C:\Users\TAN\Dropbox\Do_an_tot_nghiep\Do_an_tot_nghiep\Firmware\Dustmonitoring.uvprojx
+Project File Date:  11/26/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+main.c(246): warning:  #1295-D: Deprecated declaration N5110_reset - give arg types
+  static void N5110_reset();
+main.c(247): warning:  #1295-D: Deprecated declaration N5110_init - give arg types
+  static void N5110_init();
+main.c(465): warning:  #174-D: expression has no effect
+      for(x_pos; x_pos < X_max; x_pos++)
+main.c(467): warning:  #174-D: expression has no effect
+          for(y_pos; y_pos < Rows; y_pos++)
+main.c(984): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				integer_to_string((uint32_t)p_ss->p_dht_ss.temperature,&s1[0]);
+main.c(985): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				integer_to_string((uint32_t)p_ss->p_dht_ss.humi,&s2[0]);
+main.c(986): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				integer_to_string(p_ss->p_sds_ss.pm10_value,&s3[0]);
+main.c(987): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				integer_to_string(p_ss->p_sds_ss.pm25_value,&s4[0]);
+main.c(993): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				sim808_usart_send_string(s1);
+main.c(995): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				sim808_usart_send_string(s2);
+main.c(997): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				sim808_usart_send_string(s4);
+main.c(999): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				sim808_usart_send_string(s3);
+main.c(436): warning:  #177-D: function "N5110_print_custom_char"  was declared but never referenced
+  static void N5110_print_custom_char(unsigned char *map)
+main.c(447): warning:  #177-D: function "N5110_fill"  was declared but never referenced
+  static void N5110_fill(unsigned char bufr)
+main.c(490): warning:  #177-D: function "N5110_print_image"  was declared but never referenced
+  static void N5110_print_image(const unsigned char *bmp)
+main.c(257): warning:  #177-D: function "print_char"  was declared but never referenced
+  static void print_char(unsigned char x_pos, unsigned char y_pos, unsigned char ch, unsigned char colour);
+main.c(258): warning:  #177-D: function "print_string"  was declared but never referenced
+  static void print_string(unsigned char x_pos, unsigned char y_pos, unsigned char *ch, unsigned char colour);
+main.c(514): warning:  #177-D: function "print_chr"  was declared but never referenced
+  static void print_chr(unsigned char x_pos, unsigned char y_pos, signed int value, unsigned char colour)
+main.c(727): warning:  #177-D: function "print_float"  was declared but never referenced
+  static void print_float(unsigned char x_pos, unsigned char y_pos, float value, unsigned char points, unsigned char colour)
+main.c(263): warning:  #177-D: function "Draw_Pixel"  was declared but never referenced
+  static void Draw_Pixel(unsigned char x_pos, unsigned char y_pos, unsigned char colour);
+main.c: 20 warnings, 0 errors
+linking...
+.\Objects\Smarthome.axf: Error: L6218E: Undefined symbol sim808_send_data_to_server (referred from main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+".\Objects\Smarthome.axf" - 1 Error(s), 20 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: EXTI Version: 3.5.0
+   * Component: Flash Version: 3.5.0
+   * Component: Framework Version: 3.5.1
+   * Component: GPIO Version: 3.5.0
+   * Component: RCC Version: 3.5.0
+   * Component: TIM Version: 3.5.0
+   * Component: USART Version: 3.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\TAN\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\TAN\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\TAN\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
+  C:\Users\TAN\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver\GPIO_STM32F10x.h
+      Source file:   RTE_Driver\GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+
+   * Component: Keil::Device:StdPeriph Drivers:EXTI:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_exti.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_exti.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Flash:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_flash.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_flash.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
